@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .business-name{
+    font-weight: bold;
+    font-family: 'Bruno Ace SC', cursive;
+  }
+  .panel-content-wrapper{
+    height: 90vh;
+    padding: 15px;
+  }
+  .active{
+    background-color: rgb(230, 230, 230);
+    button{
+      background-color: rgb(230, 230, 230);
+    }
+  }
