@@ -1,0 +1,67 @@
+export default {
+  TEXT_COLOR_PRIMARY: '#0D1B1E',
+  TEXT_COLOR_SECONDARY: '#FAFBFF',
+  TEXT_COLOR_GREEN: '#10B76A',
+  BG_PRIMARY: '#fff',
+  BG_SECONDARY: '#0D1B1E',
+  BG_GREEN: '#10B76A',
+  BUTTON_BORDER_RADIUS: 50,
+  FORM_ELEMENTS: {
+    BORDER_RADIUS: 12,
+    BORDER_COLOR: '#7C8E93',
+    BORDER_WIDTH: 1,
+    PADDING_HORIZONTAL: 15,
+    PADDING_VERTICAL: 10,
+  },
+
+  //Updated Themes
+  PRINCIPAL: {
+    DARK: '#0D1B1E',
+    GREEN: '#2EB979',
+    WHITE: '#FAFBFF',
+  },
+  SECONDARY: {
+    PURPLE: '#596AFF',
+    BLUE: '#23C2F0',
+    YELLOW: '#FFBA08',
+  },
+  DARK_APP: {
+    DARK_1: '#0D1B1E',
+    DARK_2: '#3A494B',
+    DARK_3: '#7C8E93',
+    DARK_4: '#A5B6BA',
+    DARK_5: '#161B2C',
+  },
+  LIGHT_APP: {
+    LIGHT_1: '#C5D3D7',
+    LIGHT_2: '#D9E7EB',
+    LIGHT_3: '#EBF4F6',
+    WHITE: '#FFFFFF',
+    GREEN: '#13A579',
+  },
+  PURPLE_APP: {
+    PURPLE_1: '#596AFF',
+    PURPLE_2: '#3A4FFF',
+    PURPLE_3: '#8B97FF',
+  },
+  BLUE_APP: {
+    BLUE_1: '#00A9DA',
+    BLUE_2: '#23C2F0',
+    BLUE_3: '#54D9FF',
+  },
+  SUCCESS: {
+    GREEN_1: '#10B76A',
+    GREEN_2: '#E6FBE2',
+    GREEN_3: '#018246',
+  },
+  WARNING: {
+    ORANGE_1: '#FF7F11',
+    ORANGE_2: '#FFEED4',
+    ORANGE_3: '#DE4300',
+  },
+  CRITICAL: {
+    RED_1: '#FF1654',
+    RED_2: '#FFE7E8',
+    RED_3: '#DD0337',
+  },
+};
