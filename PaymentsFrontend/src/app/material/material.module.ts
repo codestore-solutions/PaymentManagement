@@ -23,6 +23,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 
 
@@ -51,7 +52,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatTableModule,
     MatTabsModule,
     MatTreeModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ClipboardModule
   ],
   exports: [
     MatRippleModule,
@@ -75,7 +77,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatTableModule,
     MatTabsModule,
     MatTreeModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ClipboardModule
   ]
 })
 export class MaterialModule { }

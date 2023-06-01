@@ -1,17 +1,21 @@
 .example-spacer {
-    flex: 1 1 auto;
-  }
-  .business-name{
+  flex: 1 1 auto;
+}
+.panel-content-wrapper{
+  height: 90vh;
+  padding: 20px;
+}
+.active{
+  button{
+    background-color: #6082B6;
     font-weight: bold;
-    font-family: 'Bruno Ace SC', cursive;
   }
-  .panel-content-wrapper{
-    height: 90vh;
-    padding: 15px;
-  }
-  .active{
-    background-color: rgb(230, 230, 230);
-    button{
-      background-color: rgb(230, 230, 230);
-    }
-  }
+}
+.white{
+  color: white !important;
+}
+.sidenav{
+  background-color: #002244 !important;
+  border-top-right-radius: 35px !important;
+  border-bottom-right-radius: 35px !important;
+}

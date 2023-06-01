@@ -1,45 +1,27 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <button mat-icon-button (click)="sidenav.toggle();">
-            <mat-icon>menu</mat-icon>
-        </button>
-    </mat-toolbar-row>
-</mat-toolbar>
 <mat-sidenav-container>
-    <mat-sidenav #sidenav opened="true" mode="side">
+    <mat-sidenav #sidenav opened="true" mode="side" class="sidenav">
         <mat-nav-list>
-            <a mat-list-item routerLink="home" routerLinkActive="active">Home</a>
-            <mat-expansion-panel class=mat-elevation-z0>
-                <mat-expansion-panel-header>
-                    Payments
-                </mat-expansion-panel-header>
-                <mat-expansion-panel class=mat-elevation-z0>
-                    <mat-expansion-panel-header>
-                        Suppliers
-                    </mat-expansion-panel-header>
-                    <mat-nav-list>
-                        <a mat-list-item routerLink="suppliers-bills" routerLinkActive="active">Bills</a>
-                        <a mat-list-item routerLink="suppliers-payments" routerLinkActive="active">Payments</a>
-                    </mat-nav-list>
-                </mat-expansion-panel>
-                <mat-expansion-panel class=mat-elevation-z0>
-                    <mat-expansion-panel-header>
-                        Orders
-                    </mat-expansion-panel-header>
-                    <mat-nav-list>
-                        <a mat-list-item routerLink="orders-payments" routerLinkActive="active">Order Payments</a>
-                    </mat-nav-list>
-                </mat-expansion-panel>
-            </mat-expansion-panel>
+            <h3 class="white">business logo</h3>
+            <a mat-list-item routerLink="transactions" routerLinkActive="active"><button
+                    mat-flat-button class="white"><mat-icon>monetization_on</mat-icon>Transactions</button></a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar>
             <mat-toolbar-row>
-                <span>{{todayDate | date:'fullDate'}}</span>
+                <button mat-icon-button (click)="sidenav.toggle();">
+                    <mat-icon>menu</mat-icon>
+                    &NonBreakingSpace;
+                </button>
                 <span class="example-spacer"></span>
-                <button type="button" mat-flat-button color="warn" (click)="logout()"><mat-icon>exit_to_app</mat-icon>
-                    Logout</button>
+                <button mat-mini-fab color="accent" matTooltip="Business Admin" [matMenuTriggerFor]="profile">
+                    <mat-icon>person</mat-icon>
+                </button>
+                <mat-menu #profile="matMenu">
+                    <button mat-menu-item>Profile</button>
+                    <button mat-menu-item>Settings</button>
+                    <button (click)="logout()" mat-menu-item>Logout</button>
+                </mat-menu>
             </mat-toolbar-row>
         </mat-toolbar>
         <div class="panel-content-wrapper">

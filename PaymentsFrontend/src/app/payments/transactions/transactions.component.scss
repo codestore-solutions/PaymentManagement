@@ -1,0 +1,34 @@
+.transaction-table{
+    width: 100%;
+    .copy-icon{
+        height: 1em;
+    }
+}
+th {
+    background-color: gainsboro !important;
+}
+.stats-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    mat-card{
+        width: 30%;
+        margin: 0.5rem;
+        padding: 1rem;
+        .stats{
+            font-size: 2em;
+            font-weight: 500;
+        }
+        .blue{
+            color: #0047AB;
+        }
+        .green{
+            color: green;
+        }
+        .red{
+            color: #DC143C;
+        }
+    }
+}
