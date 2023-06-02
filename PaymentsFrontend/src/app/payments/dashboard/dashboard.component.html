@@ -2,8 +2,10 @@
     <mat-sidenav #sidenav opened="true" mode="side" class="sidenav">
         <mat-nav-list>
             <h3 class="white">business logo</h3>
-            <a mat-list-item routerLink="transactions" routerLinkActive="active"><button
-                    mat-flat-button class="white"><mat-icon>monetization_on</mat-icon>Transactions</button></a>
+            <a mat-list-item routerLink="home" routerLinkActive="active"><button mat-flat-button
+                    class="white nav-btn"><mat-icon>monetization_on</mat-icon>Home</button></a>
+            <a mat-list-item routerLink="transactions" routerLinkActive="active"><button mat-flat-button
+                    class="white nav-btn"><mat-icon>monetization_on</mat-icon>Transactions</button></a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -14,6 +16,7 @@
                     &NonBreakingSpace;
                 </button>
                 <span class="example-spacer"></span>
+                <span>admin@business.com</span> &NonBreakingSpace; &NonBreakingSpace;
                 <button mat-mini-fab color="accent" matTooltip="Business Admin" [matMenuTriggerFor]="profile">
                     <mat-icon>person</mat-icon>
                 </button>

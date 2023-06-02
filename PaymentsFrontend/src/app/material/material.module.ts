@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MatRippleModule } from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,7 +25,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {ClipboardModule} from '@angular/cdk/clipboard';
-
 
 
 @NgModule({
@@ -53,7 +53,8 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatTabsModule,
     MatTreeModule,
     MatTooltipModule,
-    ClipboardModule
+    ClipboardModule,
+    MatSelectModule
   ],
   exports: [
     MatRippleModule,
@@ -78,7 +79,8 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatTabsModule,
     MatTreeModule,
     MatTooltipModule,
-    ClipboardModule
+    ClipboardModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }
