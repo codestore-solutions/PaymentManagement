@@ -2,20 +2,19 @@
     <form [formGroup]="adminLoginForm" (ngSubmit)="login()">
         <mat-card>
             <h1>Business Admin</h1>
-            <br>
             <mat-form-field appearance="fill">
                 <mat-label>Username</mat-label>
                 <input type="text" matInput formControlName="username">
                 <mat-error>Username is a required field.</mat-error>
             </mat-form-field>
-            <br>
             <mat-form-field appearance="fill">
                 <mat-label>Password</mat-label>
                 <input type="password" matInput formControlName="password">
                 <mat-error>Password is a required field.</mat-error>
             </mat-form-field>
-            <br>
             <button type="submit" mat-raised-button color="primary">Login</button>
+            <br>
+            <a routerLink="/admin/dashboard">Go to dashboard</a>
         </mat-card>
     </form>
 </div>
