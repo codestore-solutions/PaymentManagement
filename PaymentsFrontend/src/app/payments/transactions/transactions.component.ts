@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { TransactionDetailComponent } from '../transaction-detail/transaction-detail.component';
 
 export interface PeriodicElement {
   id: number;
@@ -19,8 +22,20 @@ const TRANSACTION_DATA: PeriodicElement[] = [
   styleUrls: ['./transactions.component.scss']
 })
 export class TransactionsComponent {
+  constructor(
+    private _snackbar: MatSnackBar,
+    private _dialog: MatDialog
+    ){}
 
   displayedColumns: string[] = ["id", "transaction_id", "amount", "date", "status", "details"];
   dataSource = TRANSACTION_DATA;
+
+  copyAlert():void{
+    this._snackbar.open("Copied to clipboard", "OK", {duration:2000})
+  }
+
+  openDetailsDialogue():void{
+    this._dialog.open(TransactionDetailComponent);
+  }
 
 }
