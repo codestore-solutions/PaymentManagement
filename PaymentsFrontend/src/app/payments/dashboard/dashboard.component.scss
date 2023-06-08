@@ -6,7 +6,10 @@
   padding: 20px;
 }
 .active{
-  background-color: #4249EC;
+  background-color: #6082B6;
+  button{
+    font-weight: bold;
+  }
 }
 .nav-btn{
   background-color: transparent !important;
@@ -15,8 +18,7 @@
   color: white !important;
 }
 .sidenav{
-  background-color: #545BFC !important;
+  background-color: #002244 !important;
   border-top-right-radius: 35px !important;
   border-bottom-right-radius: 35px !important;
 }
-

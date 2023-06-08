@@ -3,7 +3,7 @@
         <mat-nav-list>
             <h3 class="white">business logo</h3>
             <a mat-list-item routerLink="home" routerLinkActive="active"><button mat-flat-button
-                    class="white nav-btn"><mat-icon>home</mat-icon>Home</button></a>
+                    class="white nav-btn"><mat-icon>monetization_on</mat-icon>Home</button></a>
             <a mat-list-item routerLink="transactions" routerLinkActive="active"><button mat-flat-button
                     class="white nav-btn"><mat-icon>monetization_on</mat-icon>Transactions</button></a>
         </mat-nav-list>
@@ -17,7 +17,7 @@
                 </button>
                 <span class="example-spacer"></span>
                 <span>admin@business.com</span> &NonBreakingSpace; &NonBreakingSpace;
-                <button mat-mini-fab matTooltip="Business Admin" [matMenuTriggerFor]="profile">
+                <button mat-mini-fab color="accent" matTooltip="Business Admin" [matMenuTriggerFor]="profile">
                     <mat-icon>person</mat-icon>
                 </button>
                 <mat-menu #profile="matMenu">

@@ -28,15 +28,9 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/web.config",
-              {
-                "glob": "**/*",
-                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-                "output": "/assets/"
-              }
+              "src/web.config"
             ],
             "styles": [
-              "src/theme.less",
               "./src/theme.scss",
               "src/styles.scss"
             ],
