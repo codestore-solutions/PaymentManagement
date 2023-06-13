@@ -7,7 +7,8 @@ import { PaymentsRoutingModule } from './payments-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
-import { HomeComponent } from './home/home.component';
+import { ReceivedPaymentsComponent } from './received-payments/received-payments.component';
+import { PayoutsComponent } from './payouts/payouts.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HomeComponent } from './home/home.component';
     DashboardComponent,
     TransactionsComponent,
     TransactionDetailComponent,
-    HomeComponent
+    ReceivedPaymentsComponent,
+    PayoutsComponent
   ],
   imports: [
     CommonModule,

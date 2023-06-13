@@ -15,7 +15,7 @@ const routes: Routes = [
     title:"Login"
   },
   {
-    path:"admin",
+    path:"admin/dashboard",
     loadChildren: () => import("./payments/payments.module").then(mod=>mod.PaymentsModule)
   },
   {

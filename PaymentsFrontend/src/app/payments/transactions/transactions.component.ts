@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface PeriodicElement {
   id: number;
@@ -20,7 +21,14 @@ const TRANSACTION_DATA: PeriodicElement[] = [
 })
 export class TransactionsComponent {
 
+  constructor(
+    private _router: Router
+  ){}
+
   displayedColumns: string[] = ["id", "transaction_id", "amount", "date", "status", "details"];
   dataSource = TRANSACTION_DATA;
+
+  showDetail():void{
+  }
 
 }

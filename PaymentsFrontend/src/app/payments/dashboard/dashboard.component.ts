@@ -7,13 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
-  todayDate:Date = new Date();
-
   constructor(){}
-
-  ngOnInit():void{
-   
-  }
 
   logout():void{
     

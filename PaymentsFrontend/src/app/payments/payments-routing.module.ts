@@ -2,26 +2,36 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TransactionsComponent } from './transactions/transactions.component';
-import { HomeComponent } from './home/home.component';
+import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
+import { PayoutsComponent } from './payouts/payouts.component';
+import { ReceivedPaymentsComponent } from './received-payments/received-payments.component';
 
 const routes: Routes = [
   {
-    path:"dashboard",
+    path:"",
     component:DashboardComponent,
     title:"Admin - Dashboard",
     children:[
       {
         path:"",
-        redirectTo:"home",
+        redirectTo:"transactions",
         pathMatch:"full"
-      },
-      {
-        path:"home",
-        component:HomeComponent
       },
       {
         path:"transactions",
         component:TransactionsComponent
+      },
+      {
+        path:"transactions/:id",
+        component:TransactionDetailComponent
+      },
+      {
+        path:"payouts",
+        component:PayoutsComponent
+      },
+      {
+        path:"payments",
+        component:ReceivedPaymentsComponent
       }
     ]
   }
