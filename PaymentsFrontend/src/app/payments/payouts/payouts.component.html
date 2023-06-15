@@ -1,1 +1,55 @@
-<p>payouts works!</p>
+<h3>Pending Payouts</h3>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z2 transaction-table">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>
+            <b>Sr. No.</b>
+        </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.id}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vendor">
+        <th mat-header-cell *matHeaderCellDef>
+            <b>Vendor Name</b>
+        </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.vendor}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="payout">
+        <th mat-header-cell *matHeaderCellDef>
+            <b>Payout</b>
+        </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.payout | currency:'INR'}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="last_payout">
+        <th mat-header-cell *matHeaderCellDef>
+            <b>Last Payout</b>
+        </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.last_payout | date}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="details">
+        <th mat-header-cell *matHeaderCellDef>
+            <b>Details</b>
+        </th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="warn" (click)="showDetail()">
+                <img src="../../../assets/send.svg" alt="view">
+            </button>
+            <button mat-icon-button color="primary" (click)="showDetail()">
+                <img src="../../../assets/eye.svg" alt="view">
+            </button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

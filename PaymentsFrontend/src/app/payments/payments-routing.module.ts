@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TransactionsComponent } from './transactions/transactions.component';
-import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
 import { PayoutsComponent } from './payouts/payouts.component';
 import { ReceivedPaymentsComponent } from './received-payments/received-payments.component';
+import { PageNotFoundComponent } from '../shared/page-not-found/page-not-found.component';
+import { ReceivedPaymentDetailsComponent } from './received-payment-details/received-payment-details.component';
 
 const routes: Routes = [
   {
@@ -14,24 +14,20 @@ const routes: Routes = [
     children:[
       {
         path:"",
-        redirectTo:"transactions",
+        redirectTo:"payments",
         pathMatch:"full"
-      },
-      {
-        path:"transactions",
-        component:TransactionsComponent
-      },
-      {
-        path:"transactions/:id",
-        component:TransactionDetailComponent
-      },
-      {
-        path:"payouts",
-        component:PayoutsComponent
       },
       {
         path:"payments",
         component:ReceivedPaymentsComponent
+      },
+      {
+        path:"payments/payment/:id",
+        component:ReceivedPaymentDetailsComponent
+      },
+      {
+        path:"payouts",
+        component:PayoutsComponent
       }
     ]
   }

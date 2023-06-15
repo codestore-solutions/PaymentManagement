@@ -5,19 +5,16 @@ import { SharedModule } from '../shared/shared.module';
 
 import { PaymentsRoutingModule } from './payments-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TransactionsComponent } from './transactions/transactions.component';
-import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
 import { ReceivedPaymentsComponent } from './received-payments/received-payments.component';
 import { PayoutsComponent } from './payouts/payouts.component';
-
+import { ReceivedPaymentDetailsComponent } from './received-payment-details/received-payment-details.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    TransactionsComponent,
-    TransactionDetailComponent,
     ReceivedPaymentsComponent,
-    PayoutsComponent
+    PayoutsComponent,
+    ReceivedPaymentDetailsComponent
   ],
   imports: [
     CommonModule,
