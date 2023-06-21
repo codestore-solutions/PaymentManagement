@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'payment-management-dev'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7BB48B0F9FFB4482AFE2A9FCACDF259E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C91B9AC6B0F24E2AA9F14CEE2353208B }}
           package: .
