@@ -70,6 +70,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       id: deploy-to-webapp
       with:
-        app-name: 'app-payment-management-dev'
+        app-name: 'payment-management-dev'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1B3AB76F8852468E80760028F566BAEA }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
