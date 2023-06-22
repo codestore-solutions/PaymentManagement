@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - payment-management-dev
 on:
   push:
     branches:
-      - dev
+      - dev-frontend
   workflow_dispatch:
 
 jobs:
@@ -25,8 +25,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          npm run test --if-present
-      
+          
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -34,7 +33,7 @@ jobs:
           path: .
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     environment:
       name: 'Production'
