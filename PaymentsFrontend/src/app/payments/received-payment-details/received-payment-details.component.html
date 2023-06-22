@@ -1,1 +1,39 @@
-<p>received-payment-details works!</p>
+<h3>Order Payment Details</h3>
+<div class="wrapper">
+    <mat-card>
+        <mat-card-content>
+            <div class="row">
+                <span>Transaction ID</span>
+                <span class="spacer"></span>
+                <span><b>59fr-01230</b></span>
+            </div>
+            <div class="row">
+                <span>User Name</span>
+                <span class="spacer"></span>
+                <span><b>Abhi</b></span>
+            </div>
+            <div class="row">
+                <span>Total Amount</span>
+                <span class="spacer"></span>
+                <span><b>{{2305 | currency:'INR'}}</b></span>
+            </div>
+            <div class="row">
+                <span>Status</span>
+                <span class="spacer"></span>
+                <span><b>Done</b></span>
+            </div>
+            <div class="row">
+                <span>Mode</span>
+                <span class="spacer"></span>
+                <span><b>Card</b></span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-content>
+            <span>Smart Watch</span>
+            <span class="spacer"></span>
+            <span><b>{{2305 | currency:'INR'}}</b></span>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -5,6 +5,7 @@ import { PayoutsComponent } from './payouts/payouts.component';
 import { ReceivedPaymentsComponent } from './received-payments/received-payments.component';
 import { PageNotFoundComponent } from '../shared/page-not-found/page-not-found.component';
 import { ReceivedPaymentDetailsComponent } from './received-payment-details/received-payment-details.component';
+import { PayoutDetailsComponent } from './payout-details/payout-details.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path:"payouts",
         component:PayoutsComponent
+      },
+      {
+        path:"payouts/payout/:id",
+        component:PayoutDetailsComponent
       }
     ]
   }

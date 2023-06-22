@@ -8,13 +8,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReceivedPaymentsComponent } from './received-payments/received-payments.component';
 import { PayoutsComponent } from './payouts/payouts.component';
 import { ReceivedPaymentDetailsComponent } from './received-payment-details/received-payment-details.component';
+import { PayoutDetailsComponent } from './payout-details/payout-details.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
     ReceivedPaymentsComponent,
     PayoutsComponent,
-    ReceivedPaymentDetailsComponent
+    ReceivedPaymentDetailsComponent,
+    PayoutDetailsComponent
   ],
   imports: [
     CommonModule,
