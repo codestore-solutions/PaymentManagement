@@ -54,12 +54,10 @@ jobs:
         path: .
 
   deploy:
-    permissions:
-      contents: none
     runs-on: windows-latest
     needs: build
     environment:
-      name: 'Development'
+      name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -69,8 +67,8 @@ jobs:
         name: node-app
 
     - name: 'Deploy to Azure WebApp'
-      id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
+      id: deploy-to-webapp
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1B3AB76F8852468E80760028F566BAEA }}
