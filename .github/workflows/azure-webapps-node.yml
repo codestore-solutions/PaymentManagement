@@ -19,39 +19,33 @@
 
 on:
   push:
-    branches: [ "dev" ]
+    branches:
+      - dev-frontend
   workflow_dispatch:
-
-env:
-  AZURE_WEBAPP_NAME: payment-management-dev    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: './dist/payments-frontend'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '18.x'                # set this to the node version to use
-
-permissions:
-  contents: read
 
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ env.NODE_VERSION }}
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
 
-    - name: npm install, build, and test
-      working-directory: PaymentsFrontend
-      run: |
-        npm install
-        npm run build 
-
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v3
-      with:
-        name: node-app
-        path: .
+      - name: npm install, build, and test
+        working-directory: PaymentFrontend
+        run: |
+          npm install
+          npm run build --if-present
+              
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-app
+          path: .
 
   deploy:
     runs-on: windows-latest
@@ -61,15 +55,16 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-    - name: Download artifact from build job
-      uses: actions/download-artifact@v3
-      with:
-        name: node-app
-
-    - name: 'Deploy to Azure WebApp'
-      uses: azure/webapps-deploy@v2
-      id: deploy-to-webapp
-      with:
-        app-name: 'payment-management-dev'
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1B3AB76F8852468E80760028F566BAEA }}
-        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: node-app
+               
+      - name: 'Deploy to Azure WebApp'
+        uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
+        with:
+         app-name: 'app-payment-management-dev'
+         slot-name: 'Production'
+         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1B3AB76F8852468E80760028F566BAEA }}
+         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
